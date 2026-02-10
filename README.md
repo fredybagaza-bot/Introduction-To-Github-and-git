@@ -1,60 +1,199 @@
 # Introduction to Git and GitHub
 
+A beginner-friendly guide to help you use GitHub effectively in your learning journey — no prior programming experience required.
+
+---
+
 ## What is Git?
 
-**Git** is a powerful, open-source version control system that allows multiple developers to collaborate on a project by tracking changes in the source code. Created by Linus Torvalds in 2005, Git is widely used to manage and maintain different versions of files, providing history tracking, branching, and merging functionalities.
+**Git** is a version control system — it tracks every change you make to your files so you can go back to any previous version. Think of it as an "undo history" for your entire project.
 
-With Git, developers can:
-- Maintain a history of all code changes.
-- Revert to previous versions of the project.
-- Create isolated branches for new features or bug fixes.
-- Merge changes back into the main codebase without losing work.
+Created by Linus Torvalds in 2005, Git lets you:
 
-### Key Git Concepts:
-- **Repository (Repo):** A folder where Git tracks changes. It can exist locally on your machine or on a remote server like GitHub.
-- **Commit:** A snapshot of changes to the repository. Each commit has a unique ID and records the author and timestamp of the change.
-- **Branch:** A separate line of development, allowing you to work on new features or experiments without affecting the main codebase.
-- **Merge:** Combining changes from one branch into another.
-- **Pull Request:** A way to propose changes and review code before merging it into the main branch.
+- Save snapshots of your work at any point (called **commits**).
+- Experiment on separate **branches** without breaking your main project.
+- Collaborate with others by **merging** everyone's changes together.
 
 ## What is GitHub?
 
-**GitHub** is a cloud-based platform built around Git, offering hosting services for Git repositories. It facilitates collaboration by providing tools for version control, issue tracking, code review, and continuous integration. GitHub allows developers to work together on projects regardless of their physical location.
+**GitHub** is a website that hosts your Git projects online. It adds collaboration tools on top of Git — you can share code, review each other's work, track tasks, and more.
 
-### Why Use GitHub?
-- **Collaboration:** Share code with your team or community, manage issues, and track project progress.
-- **Open Source Contributions:** GitHub is the largest platform for open source projects, allowing anyone to contribute to popular software.
-- **Code Backup:** By hosting your repositories on GitHub, you ensure your code is safe and accessible from anywhere.
-- **Project Management:** Tools like issue tracking, project boards, and pull requests make it easy to manage complex projects.
-- **Integration:** GitHub integrates with popular tools like Slack, Trello, and continuous integration platforms for automated testing and deployment.
+**Why it matters for your learning:**
+- Your projects are backed up and accessible from anywhere.
+- You build a public portfolio that shows your work.
+- You learn the same workflow used by professional developers and AI teams worldwide.
 
-### Common GitHub Terms:
-- **Repository (Repo):** A project’s folder hosted on GitHub. It contains all project files and version history.
-- **Fork:** A copy of someone else’s repository that you can modify without affecting the original project.
-- **Clone:** A local copy of a repository from GitHub that you can work on.
-- **Pull Request:** A request to merge changes from one branch or forked repository into another.
-- **Issues:** GitHub's built-in tool for tracking bugs, tasks, or feature requests in a repository.
+---
 
-## Getting Started
+## Getting Set Up
 
-To get started with Git and GitHub:
-1. [Download Git](https://git-scm.com/downloads) and install it on your computer.
-2. Create a [GitHub account](https://github.com/).
-3. Initialize a new Git repository and connect it to a GitHub repository.
+### 1. Create a GitHub account
 
-### Example Workflow:
+Go to [github.com](https://github.com/) and sign up for a free account.
+
+> If you are a student, apply for the [GitHub Student Developer Pack](https://github.com/education/students) — it gives you free access to premium tools including GitHub Copilot.
+
+### 2. Install Git on your computer
+
+- **Windows:** Download from [git-scm.com/downloads](https://git-scm.com/downloads) and run the installer.
+- **Mac:** Open Terminal and run `git --version`. If Git is not installed, you will be prompted to install it.
+- **Linux:** Run `sudo apt install git` (Ubuntu/Debian) or `sudo dnf install git` (Fedora).
+
+### 3. Configure Git with your identity
+
+Open your terminal (Command Prompt, PowerShell, or Terminal) and run:
+
 ```bash
-# Initialize a new Git repository
-git init
+git config --global user.name "Your Name"
+git config --global user.email "your-email@example.com"
+```
 
-# Add files to the repository
+Use the same email you used for your GitHub account.
+
+---
+
+## Key Concepts
+
+| Term | What it means |
+|------|---------------|
+| **Repository (Repo)** | A folder tracked by Git. Contains your project files and their full history. |
+| **Commit** | A saved snapshot of your changes. Each commit has a message describing what changed. |
+| **Branch** | A separate line of work. The default branch is called `main`. |
+| **Merge** | Combining changes from one branch into another. |
+| **Clone** | Downloading a copy of a remote repository to your computer. |
+| **Fork** | Creating your own copy of someone else's repository on GitHub. |
+| **Pull Request (PR)** | A request to merge your changes into another branch or repository. This is where code review happens. |
+| **Push** | Uploading your local commits to GitHub. |
+| **Pull** | Downloading the latest changes from GitHub to your computer. |
+
+---
+
+## Your First Workflow
+
+This is the basic cycle you will use every time you work on a project.
+
+### Using the terminal (command line)
+
+```bash
+# 1. Clone a repository from GitHub to your computer
+git clone https://github.com/your-username/your-repo.git
+
+# 2. Move into the project folder
+cd your-repo
+
+# 3. Make your changes (edit files, add files, etc.)
+
+# 4. See what has changed
+git status
+
+# 5. Stage your changes (tell Git what to include in the next commit)
 git add .
 
-# Commit changes
-git commit -m "Initial commit"
+# 6. Commit your changes with a descriptive message
+git commit -m "Add my introduction to the README"
 
-# Connect to GitHub (replace with your repository's URL)
-git remote add origin https://github.com/username/repository.git
+# 7. Push your changes to GitHub
+git push
+```
 
-# Push changes to GitHub
-git push -u origin master
+### Using GitHub in the browser (no terminal needed)
+
+You can also edit files directly on GitHub:
+
+1. Navigate to a file in your repository.
+2. Click the **pencil icon** to edit.
+3. Make your changes.
+4. Scroll down, write a commit message, and click **Commit changes**.
+
+This is a perfectly valid way to work, especially when starting out.
+
+---
+
+## Tasks
+
+Work through these tasks in order. Each folder contains its own instructions and any starter files you need.
+
+| Task | Folder | What you will learn |
+|------|--------|---------------------|
+| 1. Create Your GitHub Profile README | [01-profile-readme](./01-profile-readme/) | Repo creation, commits, basic Markdown |
+| 2. Host a Personal Site with GitHub Pages | [02-github-pages](./02-github-pages/) | Push-to-deploy, seeing real results from Git |
+| 3. Learn Markdown | [03-markdown-basics](./03-markdown-basics/) | The formatting language used everywhere on GitHub |
+| 4. Collaborate as a Team | [04-team-collaboration](./04-team-collaboration/) | Forking, branching, pull requests, teamwork |
+| 5. Track Work with Issues and Projects | [05-issues-and-projects](./05-issues-and-projects/) | Project management the way real teams do it |
+
+---
+
+## Learning Resources
+
+These official resources will deepen your understanding. Review them alongside the tasks.
+
+### Interactive Courses (learn by doing)
+
+| Resource | Description |
+|----------|-------------|
+| [GitHub Skills](https://skills.github.com/) | Free hands-on courses that run inside GitHub repositories. Start with **"Introduction to GitHub"**. |
+| [Learn Git Branching](https://learngitbranching.js.org/) | Interactive visual tool for understanding how branches work. |
+
+### Official Documentation
+
+| Resource | Description |
+|----------|-------------|
+| [GitHub Docs - Get Started](https://docs.github.com/en/get-started) | Structured guides from account creation to advanced workflows. |
+| [Hello World - GitHub Docs](https://docs.github.com/en/get-started/start-your-journey/hello-world) | GitHub's own beginner tutorial for the pull request workflow. |
+| [Writing on GitHub (Markdown)](https://docs.github.com/en/get-started/writing-on-github) | Learn Markdown — the formatting language used in READMEs, issues, and PRs. |
+
+### For Students
+
+| Resource | Description |
+|----------|-------------|
+| [GitHub Student Developer Pack](https://github.com/education/students) | Free access to premium developer tools including GitHub Copilot. |
+| [GitHub Education](https://github.com/education) | Programs, resources, and community for students and educators. |
+
+### Deep Dives (when you are ready)
+
+| Resource | Description |
+|----------|-------------|
+| [Pro Git Book (free)](https://git-scm.com/book) | The complete reference for understanding Git in depth. |
+| [Git and GitHub Learning Resources](https://docs.github.com/en/get-started/start-your-journey/git-and-github-learning-resources) | GitHub's curated list of additional learning materials. |
+
+---
+
+## Common Mistakes and How to Fix Them
+
+| Problem | Solution |
+|---------|----------|
+| `fatal: not a git repository` | You are not inside a Git project folder. Use `cd` to navigate into your cloned repo. |
+| `error: failed to push some refs` | Someone else (or you on another device) made changes. Run `git pull` first, then `git push`. |
+| You committed to the wrong branch | Run `git log` to find your commit, then use `git cherry-pick <commit-id>` on the correct branch. |
+| You made a typo in your commit message | If you have not pushed yet: `git commit --amend -m "Corrected message"` |
+| You accidentally staged a file | Run `git reset HEAD filename` to unstage it. |
+| Your fork is behind the original repo | On your fork on GitHub, click **"Sync fork"** to pull in the latest changes. |
+
+---
+
+## What to Submit (for students)
+
+When you have completed all the tasks, submit the following links to your instructor:
+
+| Task | What to submit |
+|------|---------------|
+| Task 1 | Your GitHub profile link (e.g., `https://github.com/janedoe`) |
+| Task 2 | Your live GitHub Pages link (e.g., `https://janedoe.github.io`) |
+| Task 3 | Link to your `markdown-practice.md` file (e.g., `https://github.com/janedoe/janedoe/blob/main/markdown-practice.md`) |
+| Task 4 | Your team repository link + list of all team members' GitHub usernames |
+| Task 5 | Same team repository link (instructor will check Issues, PRs, and Projects tabs) |
+
+Each task folder has a detailed **"What to Submit"** section with the exact checklist your instructor will use for grading.
+
+---
+
+## What Next?
+
+Once you have completed the tasks above, you can:
+
+- Explore repositories on topics you are interested in using [GitHub Explore](https://github.com/explore).
+- Look for beginner-friendly issues labeled `good first issue` in projects you like.
+- Start uploading your own class projects and assignments to build your portfolio.
+- Take more [GitHub Skills](https://skills.github.com/) courses to learn about Actions, security, and advanced workflows.
+
+The best way to learn GitHub is to use it every day. Push your work, track your tasks with issues, and collaborate with your classmates. Your GitHub profile will become a living portfolio of everything you learn.
